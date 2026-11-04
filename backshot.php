@@ -1,15 +1,28 @@
 <?php
-class Enployee {
-    protected $password;
-    private $salary;
+class Vehicle {
+    public $type;
+    public $brand;
 
-
-    public function __construct($password, $salary) {
-        $this->password = $password;
-        $this->salary = $salary;
+    public function __construct($type, $brand){
+        $this->type = $type;
+        $this->brand = $brand;
     }
 
+    public function move() {
+        return "";
+    }
 }
 
-$employee = new Employee("haslo","100");
-echo $employee->getSalary()
+class Car extends Vehicle {
+    public function __construct($type) {
+        return parent::__construct($type)
+    }
+
+    public function move() {
+        return "1";
+    }
+}
+
+$car = new Car('sobowe');
+echo $dog instanceofVehicle
+
